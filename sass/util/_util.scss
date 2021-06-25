@@ -1,0 +1,138 @@
+@use '../config/config' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: $font-stack;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: $font-heading;
+  margin-bottom: 2rem;
+}
+h2 {
+  font-size: 2.1em;
+  font-family: $font-heading;
+  margin-bottom: 2rem;
+}
+h3 {
+  font-size: 1.8em;
+  font-family: $font-heading;
+  margin-bottom: 2rem;
+}
+p {
+  font-size: 1.3em;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.p-1 {
+  padding: 2rem;
+}
+.p-2 {
+  padding: 1.6rem;
+}
+.p-3 {
+  padding: 1.2rem;
+}
+
+.py-1 {
+  padding: 1.8rem 0;
+}
+.py-2 {
+  padding: 1.4rem 0;
+}
+.py-3 {
+  padding: 1.1rem 0;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+%btn-extended {
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  border: none;
+  font-family: $font-heading;
+}
+
+.btn {
+  &-yellow {
+    @extend %btn-extended;
+    color: black !important;
+    background: $yellow-color;
+  }
+}
+
+%highlight-extended {
+  position: absolute;
+  margin-top: 18px;
+  left: -5%;
+  height: 10px;
+  width: 110%;
+  filter: blur(5px);
+  border-radius: 25px;
+}
+
+.highlight {
+  &-yellow {
+    &:after {
+      content: "";
+      @extend %highlight-extended;
+      background-color: $yellow-color-light;
+    }
+  }
+
+  &-red {
+    &:after {
+      content: "";
+      @extend %highlight-extended;
+      background-color: $red-color-light;
+    }
+  }
+}
+
+.text-color {
+  &-graphic {
+    color: $graphic-text-color;
+  }
+  &-photo {
+    color: $photo-text-color;
+  }
+  &-dark_blue {
+    color: $dark-blue;
+  }
+  &-gray_blue {
+    color: $gray-blue;
+  }
+  &-very_dark_gray_blue {
+    color: $very-dark-gray-blue;
+  }
+}
+
+.designation {
+  font-size: 1.1em;
+}
