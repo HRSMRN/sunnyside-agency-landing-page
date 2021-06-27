@@ -9,7 +9,6 @@
 }
 
 html {
-  font-size: 14px;
   font-family: $font-stack;
   line-height: 1.2;
 }
@@ -19,24 +18,37 @@ h1 {
   font-family: $font-heading;
   margin-bottom: 2rem;
 }
+
 h2 {
   font-size: 2.1em;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 1.8em;
+  }
   font-family: $font-heading;
   margin-bottom: 2rem;
 }
+
 h3 {
   font-size: 1.8em;
   font-family: $font-heading;
   margin-bottom: 2rem;
 }
+
 p {
   font-size: 1.3em;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 0.8em;
+  }
+
   line-height: 1.6;
   margin-bottom: 2rem;
 }
 
 img {
   width: 100%;
+  object-fit: cover;
 }
 
 ul {
@@ -80,10 +92,21 @@ a {
 }
 
 .btn {
-  &-yellow {
+  &-contact {
     @extend %btn-extended;
     color: black !important;
     background: $yellow-color;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 1024px) {
+      background-color: white;
+      border-radius: 50px;
+
+      &:hover {
+        color: white !important;
+        background-color: hsl(201, 100%, 72%);
+      }
+    }
   }
 }
 
@@ -93,24 +116,35 @@ a {
   left: -5%;
   height: 10px;
   width: 110%;
-  filter: blur(5px);
   border-radius: 25px;
+  z-index: -1;
 }
 
 .highlight {
   &-yellow {
-    &:after {
+    &::after {
       content: "";
       @extend %highlight-extended;
-      background-color: $yellow-color-light;
+      background-color: $yellow-color;
+      opacity: 0.3;
+    }
+
+    &:hover::after {
+      background-color: $yellow-color;
+      opacity: 1;
     }
   }
 
   &-red {
-    &:after {
+    &::after {
       content: "";
       @extend %highlight-extended;
-      background-color: $red-color-light;
+      background-color: $red-color;
+      opacity: 0.3;
+    }
+    &:hover::after {
+      background-color: $red-color;
+      opacity: 1;
     }
   }
 }
@@ -135,4 +169,22 @@ a {
 
 .designation {
   font-size: 1.1em;
+
+  @media screen and(min-width:1024px) {
+    font-size: 0.75em;
+  }
+}
+
+.content {
+  padding: 2rem;
+  text-align: center;
+
+  @media screen and (min-width: 1024px) {
+    padding: 5rem 9rem;
+    text-align: left;
+  }
+}
+
+.open {
+  display: block !important;
 }
