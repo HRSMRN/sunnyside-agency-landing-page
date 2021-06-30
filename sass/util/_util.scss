@@ -104,8 +104,10 @@ a {
     @media screen and (min-width: 1024px) {
       background-color: white;
       border-radius: 50px;
+      transition: all 0.5s ease-in;
 
       &:hover {
+        transition: all 0.5s ease-in;
         color: white !important;
         background-color: hsl(201, 100%, 72%);
       }
@@ -123,6 +125,7 @@ a {
   width: 110%;
   border-radius: 25px;
   z-index: -1;
+  transition: all 0.65s ease-in-out;
 }
 
 .highlight {
@@ -137,6 +140,7 @@ a {
       &:hover::after {
         background-color: $yellow-color;
         opacity: 1;
+        transition: all 0.65s ease-in-out;
       }
     }
   }
