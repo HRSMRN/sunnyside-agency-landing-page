@@ -15,7 +15,7 @@ html {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
 
       &__icons {
         height: 20px;
@@ -291,7 +291,7 @@ html {
       grid-template-columns: repeat(2, 1fr);
 
       .grid-item {
-        height: 30rem;
+        height: 35rem;
         position: relative;
 
         img {
@@ -333,6 +333,7 @@ html {
 
     &-b {
       padding-top: 8rem;
+      height: 60rem;
 
       h4 {
         font-size: 0.8em;
