@@ -15,7 +15,7 @@ html {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
 
       &__icons {
         height: 20px;
@@ -183,15 +183,12 @@ html {
     }
 
     .footer {
-      h1 {
-        color: $graphic-text-color;
-      }
-
       &__links {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
 
         a {
           color: $footer-color;
@@ -202,7 +199,6 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 5rem;
 
         div {
           margin: 0 1rem;
@@ -243,55 +239,45 @@ html {
         &__options {
           display: block;
           height: auto;
-          width: 50%;
+          width: 40%;
           background: transparent;
-          position: absolute;
           top: 40px;
           margin-right: 0;
 
           &::before {
-            content: "";
             display: none;
           }
 
           &--wrapper {
-            display: flex;
             flex-flow: row nowrap;
-            align-items: center;
             justify-content: center;
-            width: 100%;
-            height: 100%;
 
             a {
               color: white;
-              font-size: 0.8em;
+              font-size: 0.9em;
             }
           }
         }
       }
 
       &__heading {
-        text-transform: uppercase;
-        color: white;
         letter-spacing: 10px;
       }
 
       &__image {
-        margin-top: 140px;
+        margin-top: 5rem;
 
         img {
-          height: 110px;
+          height: 120px;
           width: 35px;
         }
       }
     }
 
     &-a {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
 
       .grid-item {
-        height: 35rem;
         position: relative;
 
         img {
@@ -299,7 +285,6 @@ html {
         }
 
         &__content {
-          position: absolute;
           margin-top: 35%;
           top: 0;
           bottom: 0;
@@ -307,12 +292,7 @@ html {
         }
 
         a {
-          position: relative;
           font-size: 0.8em;
-          font-family: $font-heading;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          z-index: 1;
         }
 
         &:nth-child(2) {
@@ -323,27 +303,19 @@ html {
         &:nth-child(5),
         &:nth-child(6) {
           height: 30rem;
-
-          img {
-            height: inherit;
-          }
         }
       }
     }
 
     &-b {
       padding-top: 8rem;
-      height: 60rem;
 
       h4 {
         font-size: 0.8em;
         letter-spacing: 9px;
-        font-family: $font-heading;
-        text-transform: uppercase;
       }
 
       .testimonials {
-        display: flex;
         flex-flow: row nowrap;
 
         &__item {
@@ -367,24 +339,14 @@ html {
       background-color: $footer-color-light;
 
       .image-gallery {
-        display: grid;
         grid-template-columns: repeat(4, 1fr);
-        margin-bottom: 3.5rem;
       }
 
       .footer {
-        h1 {
-          color: $graphic-text-color;
-        }
-
         &__links {
-          display: flex;
           justify-content: center;
-          align-items: center;
-          margin-bottom: 5rem;
 
           a {
-            color: $footer-color;
             margin: 0 2rem;
 
             &:hover {
@@ -395,10 +357,6 @@ html {
 
         &__social-links {
           svg {
-            display: grid;
-            place-items: center;
-            fill: antiquewhite;
-
             &:hover {
               cursor: pointer;
 
