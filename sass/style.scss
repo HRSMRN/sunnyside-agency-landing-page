@@ -244,6 +244,7 @@ html {
           background: transparent;
           top: 40px;
           margin-right: 0;
+          clip-path: none;
 
           &::before {
             display: none;
